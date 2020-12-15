@@ -45,7 +45,7 @@ CHIP ALU {
     // Put you code here:
     //Choose x:
     //And16(a=x, b[0..15]=false, out=zx1);
-    Mux16(a=x, b[0..15]=false, sel=zx, out=x1); //zero x
+    Mux16(a=x, b[0..15]=false, sel=zx, out=x1); //zero xo
     Not16(in=x1, out=nx1);
     Mux16(a=x1, b=nx1, sel=nx, out=x2);
 
