@@ -1,4 +1,4 @@
-// This file is part of www.nand2tetris.org
+poơ// This file is part of www.nand2tetris.org
 // and the book "The Elements of Computing Systems"
 // by Nisan and Schocken, MIT Press.
 // File name: projects/02/ALU.hdl
@@ -44,14 +44,14 @@ CHIP ALU {
     PARTS:
     // Put you code here:
     //Choose x:
-    And16(a=x, b[0..15]=false, out=zx1);
-    Mux16(a=x, b=zx1, sel=zx, out=x1);
+    //And16(a=x, b[0..15]=false, out=zx1);
+    Mux16(a=x, b[0..15]=false, sel=zx, out=x1); //zero x
     Not16(in=x1, out=nx1);
     Mux16(a=x1, b=nx1, sel=nx, out=x2);
 
     //Choose y: 
-    And16(a=y, b[0..15]=false, out=zy1);
-    Mux16(a=y, b=zy1, sel=zy, out=y1);
+    //And16(a=y, b[0..15]=false, out=zy1); 
+    Mux16(a=y, b[0..15]=false, sel=zy, out=y1); //zero y
     Not16(in=y1, out=ny1);
     Mux16(a=y1, b=ny1, sel=ny, out=y2);
     
